@@ -1,0 +1,50 @@
+
+{
+  "hotels": [
+    {
+      "id": "1",
+      "roomNumber": "101",
+      "guestName": "Rahul Sharma",
+      "roomType": "Single",
+      "price": 1500,
+      "status": "Available",
+      "checkIn": "2026-10-14"
+    },
+    {
+      "id": "2",
+      "roomNumber": "102",
+      "guestName": "Priya Reddy",
+      "roomType": "Double",
+      "price": 2500,
+      "status": "Occupied",
+      "checkIn": "2026-10-14"
+    },
+    {
+      "id": "3",
+      "roomNumber": "201",
+      "guestName": "Amit Kumar",
+      "roomType": "Deluxe",
+      "price": 4000,
+      "status": "Occupied",
+      "checkIn": "2026-10-13"
+    },
+    {
+      "id": "4",
+      "roomNumber": "202",
+      "guestName": "Sakshi Patel",
+      "roomType": "Suite",
+      "price": 6500,
+      "status": "Available",
+      "checkIn": "2026-10-12"
+    },
+    {
+      "id": "5",
+      "roomNumber": "301",
+      "guestName": "Arjun Verma",
+      "roomType": "Double",
+      "price": 2500,
+      "status": "Maintenance",
+      "checkIn": "2026-10-10"
+    }
+  ]
+}

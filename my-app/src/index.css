@@ -1,0 +1,221 @@
+
+:root {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color-scheme: light;
+  --page-bg: #f5f7fb;
+  --panel-bg: #ffffff;
+  --text-color: #202938;
+  --muted-color: #748094;
+  --border-color: #e4e8ef;
+  --navbar-bg: #ffffff;
+  --input-bg: #ffffff;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page-bg: #111827;
+  --panel-bg: #1f2937;
+  --text-color: #f3f4f6;
+  --muted-color: #aab4c5;
+  --border-color: #374151;
+  --navbar-bg: #182131;
+  --input-bg: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--text-color);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text-color);
+}
+
+.app-navbar {
+  background: var(--navbar-bg);
+  border-bottom: 1px solid var(--border-color);
+  min-height: 68px;
+}
+
+.navbar-brand {
+  color: var(--text-color);
+  font-size: 1.35rem;
+}
+
+.navbar-brand:hover {
+  color: #0d6efd;
+}
+
+.theme-button {
+  background: var(--panel-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.theme-button:hover {
+  background: var(--page-bg);
+  color: #0d6efd;
+}
+
+.panel {
+  background: var(--panel-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 3%);
+}
+
+.muted {
+  color: var(--muted-color);
+}
+
+.stat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  color: #0d6efd;
+  background: rgb(13 110 253 / 10%);
+  font-size: 1.2rem;
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border-color: #0d6efd;
+}
+
+.form-control::placeholder {
+  color: var(--muted-color);
+}
+
+.form-label {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.hotel-table {
+  color: var(--text-color);
+  --bs-table-bg: var(--panel-bg);
+  --bs-table-color: var(--text-color);
+  --bs-table-border-color: var(--border-color);
+  --bs-table-hover-bg: var(--page-bg);
+  --bs-table-hover-color: var(--text-color);
+}
+
+.hotel-table thead th {
+  background: var(--page-bg);
+  color: var(--muted-color);
+  padding: 15px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hotel-table tbody td {
+  padding: 15px;
+  white-space: nowrap;
+}
+
+.border-bottom-custom {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.status-pill {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.status-pill.available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pill.occupied {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-pill.maintenance {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+:root[data-theme="dark"] .status-pill.available {
+  background: #14532d;
+  color: #bbf7d0;
+}
+
+:root[data-theme="dark"] .status-pill.occupied {
+  background: #1e3a8a;
+  color: #bfdbfe;
+}
+
+:root[data-theme="dark"] .status-pill.maintenance {
+  background: #78350f;
+  color: #fde68a;
+}
+
+:root[data-theme="dark"] .alert-info {
+  background: #164e63;
+  color: #cffafe;
+  border-color: #155e75;
+}
+
+:root[data-theme="dark"] .alert-danger {
+  background: #7f1d1d;
+  color: #fecaca;
+  border-color: #991b1b;
+}
+
+:root[data-theme="dark"] .btn-close {
+  filter: invert(1);
+}
+
+:root[data-theme="dark"] .input-group-text {
+  color: var(--text-color);
+}
+
+@media (max-width: 576px) {
+  .stat-card {
+    padding: 14px !important;
+  }
+
+  .stat-card h3 {
+    font-size: 1.2rem;
+    overflow-wrap: anywhere;
+  }
+
+  .stat-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .app-navbar .navbar-brand {
+    font-size: 1.1rem;
+  }
+}
