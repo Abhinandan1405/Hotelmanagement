@@ -6,6 +6,20 @@ Install dependencies with `npm install`, then run `npm run dev`. This starts
 the Vite app and the JSON Server API used for hotel data together. The API
 loads its initial records from `db.json` and listens on port 5000.
 
+## Deploy to Netlify
+
+The repository's `netlify.toml` configures Netlify to install dependencies and
+build the app from `my-app`, then publish the generated `dist` directory.
+The deployment command explicitly installs the locked dependencies, including
+development tools such as Vite, before compiling the app. This also supports
+CLI deployments where dependencies have not already been installed.
+Unmatched page URLs serve `index.html`, so opening or refreshing an app URL
+does not return Netlify's Page Not Found screen. Existing static assets are
+served normally.
+
+The hotel API currently runs locally on port 5000. This deployment configuration
+publishes the frontend only; it does not deploy the local JSON Server API.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
